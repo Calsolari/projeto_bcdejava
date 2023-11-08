@@ -10,9 +10,9 @@ public class Conexao {
     public Connection conexao;
     public Conexao(){
     this.servidor = "localhost";
-    this.banco = "db_empresa";
+    this.banco = "db_empresa_divos";
     this.usuario = "root";
-    this.senha = "bcd1278";
+    this.senha = "bcd127";
     }
 
     public boolean connectDrive(){
@@ -26,5 +26,12 @@ public class Conexao {
             return false;
         }
     }
+
+    public Connection getConnection(){
+        connectDrive();
+        return conexao;
+    }
+
+
 
 }
